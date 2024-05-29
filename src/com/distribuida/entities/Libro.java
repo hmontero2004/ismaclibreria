@@ -26,7 +26,7 @@ public class Libro {
 	public Libro(int idLibro, String titulo, String editorial, int numPaginas, String edicion, String idioma,
 			Date fechaPublicacion, String descripcion, String tipoPasta, String isbn, String numEjemplares,
 			String portada, String presentacion, double precio, int idCategoria, int idAutor) {
-		super();
+		
 		this.idLibro = idLibro;
 		this.titulo = titulo;
 		this.editorial = editorial;

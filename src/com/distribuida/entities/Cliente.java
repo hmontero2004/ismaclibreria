@@ -14,7 +14,7 @@ public class Cliente {
 	public Cliente () { }
 
 	public Cliente(int idCliente, String cedula, String nombre, String apellido, String telefono, String correo) {
-		super();
+	
 		this.idCliente = idCliente;
 		this.cedula = cedula;
 		this.nombre = nombre;

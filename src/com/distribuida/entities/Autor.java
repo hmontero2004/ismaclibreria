@@ -14,7 +14,7 @@ public class Autor {
 
 	public Autor(int idAutor, String nombre, String apellido, String pais, String direccion, String telefono,
 			String correo) {
-		super();
+		
 		this.idAutor = idAutor;
 		this.nombre = nombre;
 		this.apellido = apellido;
@@ -86,6 +86,6 @@ public class Autor {
 				+ ", direccion=" + direccion + ", telefono=" + telefono + ", correo=" + correo + "]";
 	}
 
-	
+	//Comentario 
 	
 }

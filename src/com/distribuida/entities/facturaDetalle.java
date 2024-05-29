@@ -11,7 +11,7 @@ public class facturaDetalle {
 	public facturaDetalle () {    }
 	
 	public facturaDetalle(int idFacturaDetalle, int cantidad, float subtotal, int idFactura, int idLibro) {
-		super();
+	
 		this.idFacturaDetalle = idFacturaDetalle;
 		this.cantidad = cantidad;
 		this.subtotal = subtotal;
