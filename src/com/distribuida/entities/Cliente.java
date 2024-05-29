@@ -1,5 +1,9 @@
 package com.distribuida.entities;
 
+import org.springframework.stereotype.Component;
+
+
+@Component
 public class Cliente {
 	
 	//Atrivutos
@@ -10,7 +14,7 @@ public class Cliente {
 	private String telefono;
 	private String correo;
 	
-	//Constructor
+	
 	public Cliente () { }
 
 	public Cliente(int idCliente, String cedula, String nombre, String apellido, String telefono, String correo) {
