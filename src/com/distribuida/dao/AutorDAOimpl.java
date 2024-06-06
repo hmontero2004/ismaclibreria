@@ -9,47 +9,40 @@ import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
-import com.distribuida.entities.Cliente;
+import com.distribuida.entities.Autor;
+
 
 @Repository
-public class ClienteDAOimpl implements ClienteDAO {
+public class AutorDAOimpl implements AutorDAO {
 
-	
 	@Autowired
 	private SessionFactory sessionFactory;
 	
 	@Override
 	@Transactional
-	public List<Cliente> findALL() {
+	public List<Autor> findALL() {
 		// TODO Auto-generated method stub
-		Session session = sessionFactory.getCurrentSession();
+        Session session = sessionFactory.getCurrentSession();
 		
-		return session.createQuery("from Cliente", Cliente.class).getResultList();
-		 
+		return session.createQuery("from Autor", Autor.class).getResultList();
+		
 	
 	}
-	
-	
 
-	
-	
-	
-	
-	
 	@Override
-	public Cliente findOne(int id) {
+	public Autor findOne(int id) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public void add(Cliente cliente) {
+	public void add(Autor autor) {
 		// TODO Auto-generated method stub
 
 	}
 
 	@Override
-	public void up(Cliente cliente) {
+	public void up(Autor autor) {
 		// TODO Auto-generated method stub
 
 	}
@@ -59,5 +52,10 @@ public class ClienteDAOimpl implements ClienteDAO {
 		// TODO Auto-generated method stub
 
 	}
-//ab
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
 }

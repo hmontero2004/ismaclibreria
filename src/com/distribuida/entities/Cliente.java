@@ -1,17 +1,34 @@
 package com.distribuida.entities;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
 import org.springframework.stereotype.Component;
 
 
 @Component
+@Entity
+@Table (name = "cliente")
 public class Cliente {
 	
 	//Atrivutos
+	@Id
+	@GeneratedValue (strategy = GenerationType.IDENTITY)
+	@Column (name = "id_cliente")
 	private int idCliente;
+	@Column (name = "cedula")
 	private String cedula;
+	@Column (name = "nombre")
 	private String nombre;
+	@Column (name = "apellido")
 	private String apellido;
+	@Column (name = "telefono")
 	private String telefono;
+	@Column (name = "correo	")
 	private String correo;
 	
 	
