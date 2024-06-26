@@ -14,7 +14,6 @@ public class PrincipalCategoria  {
 		// TODO Auto-generated method stub
 		ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("ApplicationContext.xml");
 		CategoriaDAO categoriaDAO = context.getBean("categoriaDAOimpl",CategoriaDAO.class);
-
 		List<Categoria> categoria = categoriaDAO.findALL();
 		categoria.forEach(item -> {
 			System.out.println(item.toString());
