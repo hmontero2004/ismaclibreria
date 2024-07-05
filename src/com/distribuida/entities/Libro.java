@@ -2,32 +2,58 @@ package com.distribuida.entities;
 
 import java.util.Date;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
 import org.springframework.stereotype.Component;
 @Component
+@Entity
+@Table  (name="libro")
 public class Libro {
 	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column (name = "id_Libro")
 	private int idLibro;
+	@Column (name = "titulo")
 	private String titulo;
+	@Column (name = "editorial")
 	private String editorial;
+	@Column (name = "num_Paginas")
 	private int numPaginas;
+	@Column (name = "edicion")
 	private String edicion;
+	@Column (name = "idioma")
 	private String idioma;
+	@Column (name = "fecha_Publicacion")
 	private Date fechaPublicacion;
+	@Column (name = "descripcion")
 	private String descripcion;
+	@Column (name = "tipo_Pasta")
 	private String tipoPasta;
+	@Column (name = "isbn")
 	private String isbn;
-	private String numEjemplares;
+	@Column (name = "num_Ejemplares")
+	private int numEjemplares;
+	@Column (name = "portada")
 	private String portada;
+	@Column (name = "presentacion")
 	private String presentacion;
+	@Column (name = "precio")
 	private double precio;
+	
 	private Categoria categoria;
 	private Autor autor;
 	
 	public Libro () { }
 
 	public Libro(int idLibro, String titulo, String editorial, int numPaginas, String edicion, String idioma,
-			Date fechaPublicacion, String descripcion, String tipoPasta, String isbn, String numEjemplares,
-			String portada, String presentacion, double precio, int idCategoria, int idAutor) {
+			Date fechaPublicacion, String descripcion, String tipoPasta, String isbn, int numEjemplares,
+			String portada, String presentacion, double precio) {
 		
 		this.idLibro = idLibro;
 		this.titulo = titulo;
@@ -127,11 +153,11 @@ public class Libro {
 		this.isbn = isbn;
 	}
 
-	public String getNumEjemplares() {
+	public int getNumEjemplares() {
 		return numEjemplares;
 	}
 
-	public void setNumEjemplares(String numEjemplares) {
+	public void setNumEjemplares(int numEjemplares) {
 		this.numEjemplares = numEjemplares;
 	}
 
