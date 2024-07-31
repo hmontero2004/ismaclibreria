@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.distribuida.dao.FacturaDAO;
+import com.distribuida.dao.FacturaDetalleDAO;
 
 @Controller
 @RequestMapping("/facturacion")
@@ -16,7 +17,7 @@ public class FacturaController {
 	private FacturaDAO facturaDAO;
 	
 	@Autowired
-	private FacturDetalleDAO facturaDetalleDAO;
+	private FacturaDetalleDAO facturaDetalleDAO;
 	
 	
 	@GetMapping("/findAll")
